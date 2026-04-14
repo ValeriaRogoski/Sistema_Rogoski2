@@ -4,6 +4,8 @@
  */
 package view;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author u09208248119
@@ -18,24 +20,24 @@ public class JDlgVjrUsuario extends javax.swing.JDialog {
         initComponents();
         setTitle("Cadastro de Usuários");
         setLocationRelativeTo(null);
-        habilitar();
+        habilitar(false);
     }
     
-    public void habilitar(){
-        jTxtVjrCodigo.setEnabled(false);
-        jTxtVjrNome.setEnabled(false);
-        jTxtVjrApelido.setEnabled(false);
-        jTxtVjrNome.setEnabled(false);
-        jFmtVjrDataNasc.setEnabled(false);
-        jFrmVjrCpf.setEnabled(false);
-        jPwfVjrSenha.setEnabled(false);
-        jCboVjrNivel.setEnabled(false);
-        jChbVjrAtivo.setEnabled(false);
-        jBtnVjrConfirmar.setEnabled(false);
-        jBtnVjrCancelar.setEnabled(true);
-        jBtnVjrIncluir.setEnabled(true);
-        jBtnVjrAlterar.setEnabled(true);
-        jBtnVjrExcluir.setEnabled(true);
+    public void habilitar(boolean valor){
+        jTxtVjrCodigo.setEnabled(valor);
+        jTxtVjrNome.setEnabled(valor);
+        jTxtVjrApelido.setEnabled(valor);
+        jTxtVjrNome.setEnabled(valor);
+        jFmtVjrDataNasc.setEnabled(valor);
+        jFrmVjrCpf.setEnabled(valor);
+        jPwfVjrSenha.setEnabled(valor);
+        jCboVjrNivel.setEnabled(valor);
+        jChbVjrAtivo.setEnabled(valor);
+        jBtnVjrConfirmar.setEnabled(valor);
+        jBtnVjrCancelar.setEnabled(valor);
+        jBtnVjrIncluir.setEnabled(valor);
+        jBtnVjrAlterar.setEnabled(valor);
+        jBtnVjrExcluir.setEnabled(valor);
     }
 
     /**
@@ -93,18 +95,43 @@ public class JDlgVjrUsuario extends javax.swing.JDialog {
 
         jBtnVjrAlterar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/alterar.png"))); // NOI18N
         jBtnVjrAlterar.setText("Alterar");
+        jBtnVjrAlterar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnVjrAlterarActionPerformed(evt);
+            }
+        });
 
         jBtnVjrExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Excluir.png"))); // NOI18N
         jBtnVjrExcluir.setText("Excluir");
+        jBtnVjrExcluir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnVjrExcluirActionPerformed(evt);
+            }
+        });
 
         jBtnVjrCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/cancelar.png"))); // NOI18N
         jBtnVjrCancelar.setText("Cancelar");
+        jBtnVjrCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnVjrCancelarActionPerformed(evt);
+            }
+        });
 
         jBtnVjrConfirmar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/confirmar.png"))); // NOI18N
         jBtnVjrConfirmar.setText("Confirmar");
+        jBtnVjrConfirmar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnVjrConfirmarActionPerformed(evt);
+            }
+        });
 
         jBtnVjrPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/pesquisar.png"))); // NOI18N
         jBtnVjrPesquisar.setText("Pesquisar");
+        jBtnVjrPesquisar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnVjrPesquisarActionPerformed(evt);
+            }
+        });
 
         jPwfVjrSenha.setText("jPasswordField1");
 
@@ -218,8 +245,34 @@ public class JDlgVjrUsuario extends javax.swing.JDialog {
 
     private void jBtnVjrIncluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnVjrIncluirActionPerformed
         // TODO add your handling code here:
-        
+        habilitar(true);
+    
     }//GEN-LAST:event_jBtnVjrIncluirActionPerformed
+
+    private void jBtnVjrAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnVjrAlterarActionPerformed
+        // TODO add your handling code here:
+        habilitar(true);
+    }//GEN-LAST:event_jBtnVjrAlterarActionPerformed
+
+    private void jBtnVjrExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnVjrExcluirActionPerformed
+        // TODO add your handling code here:
+        JOptionPane.showConfirmDialog(null, "Confirmar a exclusão?");
+    }//GEN-LAST:event_jBtnVjrExcluirActionPerformed
+
+    private void jBtnVjrCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnVjrCancelarActionPerformed
+        // TODO add your handling code here:
+        habilitar(false);
+    }//GEN-LAST:event_jBtnVjrCancelarActionPerformed
+
+    private void jBtnVjrConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnVjrConfirmarActionPerformed
+        // TODO add your handling code here:
+        habilitar(false);
+    }//GEN-LAST:event_jBtnVjrConfirmarActionPerformed
+
+    private void jBtnVjrPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnVjrPesquisarActionPerformed
+        // TODO add your handling code here:
+        JOptionPane.showConfirmDialog(null, "Entre com a chave primária:");
+    }//GEN-LAST:event_jBtnVjrPesquisarActionPerformed
 
     /**
      * @param args the command line arguments
