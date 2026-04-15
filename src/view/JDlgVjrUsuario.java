@@ -220,7 +220,7 @@ public class JDlgVjrUsuario extends javax.swing.JDialog {
                     .addComponent(jTxtVjrApelido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLblVjrCpf)
                     .addComponent(jFrmVjrCpf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLblVjrDataNasc)
                     .addComponent(jFmtVjrDataNasc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -235,7 +235,7 @@ public class JDlgVjrUsuario extends javax.swing.JDialog {
                     .addComponent(jBtnVjrAlterar)
                     .addComponent(jBtnVjrExcluir)
                     .addComponent(jBtnVjrCancelar)
-                    .addComponent(jBtnVjrConfirmar)
+                    .addComponent(jBtnVjrConfirmar, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jBtnVjrPesquisar))
                 .addGap(13, 13, 13))
         );

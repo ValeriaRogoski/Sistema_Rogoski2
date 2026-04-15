@@ -27,21 +27,173 @@ public class JDlgVjrBebida extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLblVjrCodigo = new javax.swing.JLabel();
+        jTxtVjrCodigo = new javax.swing.JTextField();
+        jLblVjrNome = new javax.swing.JLabel();
+        jTxtVjrNome = new javax.swing.JTextField();
+        jLblVjrMarca = new javax.swing.JLabel();
+        jLblVjrVolume = new javax.swing.JLabel();
+        jLblVjrPreco = new javax.swing.JLabel();
+        jLblVjrTeorAlcool = new javax.swing.JLabel();
+        jLblVjrDataValidade = new javax.swing.JLabel();
+        jLblVjrStatus = new javax.swing.JLabel();
+        jTxtVjrMarca = new javax.swing.JTextField();
+        jFmtVjrPreco = new javax.swing.JFormattedTextField();
+        jFormattedTextField2 = new javax.swing.JFormattedTextField();
+        jFormattedTextField3 = new javax.swing.JFormattedTextField();
+        jFmtVjrVolume = new javax.swing.JFormattedTextField();
+        jTxtVjrStatus = new javax.swing.JTextField();
+        jBtnVjrIncluir = new javax.swing.JButton();
+        jBtnVjrAlterar = new javax.swing.JButton();
+        jBtnVjrExcluir = new javax.swing.JButton();
+        jBtnVjrCancelar = new javax.swing.JButton();
+        jBtnVjrConfirmar = new javax.swing.JButton();
+        jBtnVjrPesquisar = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+
+        jLblVjrCodigo.setText("Código:");
+
+        jLblVjrNome.setText("Nome:");
+
+        jLblVjrMarca.setText("Marca:");
+
+        jLblVjrVolume.setText("Volume (ml):");
+
+        jLblVjrPreco.setText("Preço:");
+
+        jLblVjrTeorAlcool.setText("Teor Alcóolico:");
+
+        jLblVjrDataValidade.setText("Data de Validade:");
+
+        jLblVjrStatus.setText("Status:");
+
+        jTxtVjrMarca.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTxtVjrMarcaActionPerformed(evt);
+            }
+        });
+
+        jBtnVjrIncluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/incluir.png"))); // NOI18N
+        jBtnVjrIncluir.setText("Incluir");
+
+        jBtnVjrAlterar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/alterar.png"))); // NOI18N
+        jBtnVjrAlterar.setText("Alterar");
+
+        jBtnVjrExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Excluir.png"))); // NOI18N
+        jBtnVjrExcluir.setText("Excluir");
+
+        jBtnVjrCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/cancelar.png"))); // NOI18N
+        jBtnVjrCancelar.setText("Cancelar");
+
+        jBtnVjrConfirmar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/confirmar.png"))); // NOI18N
+        jBtnVjrConfirmar.setText("Confirmar");
+
+        jBtnVjrPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/pesquisar.png"))); // NOI18N
+        jBtnVjrPesquisar.setText("Pesquisar");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(182, 182, 182)
+                                .addComponent(jLblVjrDataValidade)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 109, Short.MAX_VALUE)
+                                .addComponent(jLblVjrStatus))
+                            .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jLblVjrCodigo)
+                                    .addComponent(jLblVjrNome)
+                                    .addComponent(jTxtVjrCodigo, javax.swing.GroupLayout.DEFAULT_SIZE, 210, Short.MAX_VALUE)
+                                    .addComponent(jTxtVjrNome))
+                                .addGap(23, 23, 23)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(jTxtVjrMarca, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 178, Short.MAX_VALUE)
+                                    .addComponent(jFmtVjrPreco, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLblVjrPreco, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLblVjrMarca, javax.swing.GroupLayout.Alignment.LEADING))))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLblVjrTeorAlcool)
+                            .addComponent(jLblVjrVolume)
+                            .addComponent(jFmtVjrVolume, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE)
+                            .addComponent(jFormattedTextField2)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(163, 163, 163)
+                                .addComponent(jFormattedTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(60, 60, 60)
+                                .addComponent(jTxtVjrStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jBtnVjrIncluir)
+                                .addGap(18, 18, 18)
+                                .addComponent(jBtnVjrAlterar)
+                                .addGap(18, 18, 18)
+                                .addComponent(jBtnVjrExcluir)
+                                .addGap(18, 18, 18)
+                                .addComponent(jBtnVjrCancelar)
+                                .addGap(18, 18, 18)
+                                .addComponent(jBtnVjrConfirmar)))
+                        .addGap(18, 18, 18)
+                        .addComponent(jBtnVjrPesquisar)))
+                .addContainerGap(21, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLblVjrCodigo)
+                    .addComponent(jLblVjrPreco)
+                    .addComponent(jLblVjrTeorAlcool))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTxtVjrCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jFmtVjrPreco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jFormattedTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLblVjrNome)
+                    .addComponent(jLblVjrMarca)
+                    .addComponent(jLblVjrVolume))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTxtVjrNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTxtVjrMarca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jFmtVjrVolume, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLblVjrDataValidade)
+                    .addComponent(jLblVjrStatus))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jFormattedTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTxtVjrStatus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(35, 35, 35)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jBtnVjrIncluir)
+                    .addComponent(jBtnVjrAlterar)
+                    .addComponent(jBtnVjrExcluir)
+                    .addComponent(jBtnVjrCancelar)
+                    .addComponent(jBtnVjrConfirmar, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jBtnVjrPesquisar))
+                .addContainerGap(105, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jTxtVjrMarcaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTxtVjrMarcaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTxtVjrMarcaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -86,5 +238,27 @@ public class JDlgVjrBebida extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jBtnVjrAlterar;
+    private javax.swing.JButton jBtnVjrCancelar;
+    private javax.swing.JButton jBtnVjrConfirmar;
+    private javax.swing.JButton jBtnVjrExcluir;
+    private javax.swing.JButton jBtnVjrIncluir;
+    private javax.swing.JButton jBtnVjrPesquisar;
+    private javax.swing.JFormattedTextField jFmtVjrPreco;
+    private javax.swing.JFormattedTextField jFmtVjrVolume;
+    private javax.swing.JFormattedTextField jFormattedTextField2;
+    private javax.swing.JFormattedTextField jFormattedTextField3;
+    private javax.swing.JLabel jLblVjrCodigo;
+    private javax.swing.JLabel jLblVjrDataValidade;
+    private javax.swing.JLabel jLblVjrMarca;
+    private javax.swing.JLabel jLblVjrNome;
+    private javax.swing.JLabel jLblVjrPreco;
+    private javax.swing.JLabel jLblVjrStatus;
+    private javax.swing.JLabel jLblVjrTeorAlcool;
+    private javax.swing.JLabel jLblVjrVolume;
+    private javax.swing.JTextField jTxtVjrCodigo;
+    private javax.swing.JTextField jTxtVjrMarca;
+    private javax.swing.JTextField jTxtVjrNome;
+    private javax.swing.JTextField jTxtVjrStatus;
     // End of variables declaration//GEN-END:variables
 }

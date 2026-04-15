@@ -23,13 +23,228 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="400" max="32767" attributes="0"/>
+          <Group type="102" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="182" max="-2" attributes="0"/>
+                              <Component id="jLblVjrDataValidade" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace pref="109" max="32767" attributes="0"/>
+                              <Component id="jLblVjrStatus" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="jLblVjrCodigo" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLblVjrNome" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTxtVjrCodigo" alignment="0" pref="210" max="32767" attributes="0"/>
+                                  <Component id="jTxtVjrNome" alignment="0" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                  <Component id="jTxtVjrMarca" alignment="0" pref="178" max="32767" attributes="0"/>
+                                  <Component id="jFmtVjrPreco" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jLblVjrPreco" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLblVjrMarca" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="jLblVjrTeorAlcool" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLblVjrVolume" min="-2" max="-2" attributes="0"/>
+                          <Component id="jFmtVjrVolume" pref="138" max="32767" attributes="0"/>
+                          <Component id="jFormattedTextField2" alignment="0" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="163" max="-2" attributes="0"/>
+                              <Component id="jFormattedTextField3" min="-2" pref="128" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
+                              <Component id="jTxtVjrStatus" min="-2" pref="122" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jBtnVjrIncluir" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="jBtnVjrAlterar" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="jBtnVjrExcluir" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="jBtnVjrCancelar" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="jBtnVjrConfirmar" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jBtnVjrPesquisar" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace pref="21" max="32767" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="300" max="32767" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLblVjrCodigo" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLblVjrPreco" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLblVjrTeorAlcool" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jTxtVjrCodigo" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jFmtVjrPreco" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jFormattedTextField2" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLblVjrNome" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLblVjrMarca" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLblVjrVolume" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jTxtVjrNome" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTxtVjrMarca" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jFmtVjrVolume" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLblVjrDataValidade" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLblVjrStatus" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jFormattedTextField3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTxtVjrStatus" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jBtnVjrIncluir" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jBtnVjrAlterar" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jBtnVjrExcluir" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jBtnVjrCancelar" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jBtnVjrConfirmar" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
+                  <Component id="jBtnVjrPesquisar" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="105" max="32767" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
   </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JLabel" name="jLblVjrCodigo">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="C&#xf3;digo:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTxtVjrCodigo">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLblVjrNome">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Nome:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTxtVjrNome">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLblVjrMarca">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Marca:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLblVjrVolume">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Volume (ml):"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLblVjrPreco">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Pre&#xe7;o:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLblVjrTeorAlcool">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Teor Alc&#xf3;olico:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLblVjrDataValidade">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Data de Validade:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLblVjrStatus">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Status:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTxtVjrMarca">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTxtVjrMarcaActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JFormattedTextField" name="jFmtVjrPreco">
+    </Component>
+    <Component class="javax.swing.JFormattedTextField" name="jFormattedTextField2">
+    </Component>
+    <Component class="javax.swing.JFormattedTextField" name="jFormattedTextField3">
+    </Component>
+    <Component class="javax.swing.JFormattedTextField" name="jFmtVjrVolume">
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTxtVjrStatus">
+    </Component>
+    <Component class="javax.swing.JButton" name="jBtnVjrIncluir">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/imagens/incluir.png"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Incluir"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="jBtnVjrAlterar">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/imagens/alterar.png"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Alterar"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="jBtnVjrExcluir">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/imagens/Excluir.png"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Excluir"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="jBtnVjrCancelar">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/imagens/cancelar.png"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Cancelar"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="jBtnVjrConfirmar">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/imagens/confirmar.png"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Confirmar"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="jBtnVjrPesquisar">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/imagens/pesquisar.png"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Pesquisar"/>
+      </Properties>
+    </Component>
+  </SubComponents>
 </Form>
