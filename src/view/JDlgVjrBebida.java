@@ -36,19 +36,18 @@ public class JDlgVjrBebida extends javax.swing.JDialog {
         jLblVjrPreco = new javax.swing.JLabel();
         jLblVjrTeorAlcool = new javax.swing.JLabel();
         jLblVjrDataValidade = new javax.swing.JLabel();
-        jLblVjrStatus = new javax.swing.JLabel();
         jTxtVjrMarca = new javax.swing.JTextField();
         jFmtVjrPreco = new javax.swing.JFormattedTextField();
         jFormattedTextField2 = new javax.swing.JFormattedTextField();
         jFormattedTextField3 = new javax.swing.JFormattedTextField();
         jFmtVjrVolume = new javax.swing.JFormattedTextField();
-        jTxtVjrStatus = new javax.swing.JTextField();
         jBtnVjrIncluir = new javax.swing.JButton();
         jBtnVjrAlterar = new javax.swing.JButton();
         jBtnVjrExcluir = new javax.swing.JButton();
         jBtnVjrCancelar = new javax.swing.JButton();
         jBtnVjrConfirmar = new javax.swing.JButton();
         jBtnVjrPesquisar = new javax.swing.JButton();
+        jCheckBox1 = new javax.swing.JCheckBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -65,8 +64,6 @@ public class JDlgVjrBebida extends javax.swing.JDialog {
         jLblVjrTeorAlcool.setText("Teor Alcóolico:");
 
         jLblVjrDataValidade.setText("Data de Validade:");
-
-        jLblVjrStatus.setText("Status:");
 
         jTxtVjrMarca.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -92,59 +89,60 @@ public class JDlgVjrBebida extends javax.swing.JDialog {
         jBtnVjrPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/pesquisar.png"))); // NOI18N
         jBtnVjrPesquisar.setText("Pesquisar");
 
+        jCheckBox1.setText("Ativo");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(182, 182, 182)
-                                .addComponent(jLblVjrDataValidade)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 109, Short.MAX_VALUE)
-                                .addComponent(jLblVjrStatus))
-                            .addGroup(layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jLblVjrCodigo)
-                                    .addComponent(jLblVjrNome)
-                                    .addComponent(jTxtVjrCodigo, javax.swing.GroupLayout.DEFAULT_SIZE, 210, Short.MAX_VALUE)
-                                    .addComponent(jTxtVjrNome))
-                                .addGap(23, 23, 23)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(jTxtVjrMarca, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 178, Short.MAX_VALUE)
-                                    .addComponent(jFmtVjrPreco, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLblVjrPreco, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLblVjrMarca, javax.swing.GroupLayout.Alignment.LEADING))))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLblVjrTeorAlcool)
-                            .addComponent(jLblVjrVolume)
-                            .addComponent(jFmtVjrVolume, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE)
-                            .addComponent(jFormattedTextField2)))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(163, 163, 163)
-                                .addComponent(jFormattedTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(60, 60, 60)
-                                .addComponent(jTxtVjrStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addContainerGap()
                                 .addComponent(jBtnVjrIncluir)
                                 .addGap(18, 18, 18)
-                                .addComponent(jBtnVjrAlterar)
-                                .addGap(18, 18, 18)
+                                .addComponent(jBtnVjrAlterar))
+                            .addComponent(jLblVjrDataValidade, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jFormattedTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(75, 75, 75)
+                                .addComponent(jCheckBox1))
+                            .addGroup(layout.createSequentialGroup()
                                 .addComponent(jBtnVjrExcluir)
                                 .addGap(18, 18, 18)
                                 .addComponent(jBtnVjrCancelar)
                                 .addGap(18, 18, 18)
                                 .addComponent(jBtnVjrConfirmar)))
                         .addGap(18, 18, 18)
-                        .addComponent(jBtnVjrPesquisar)))
-                .addContainerGap(21, Short.MAX_VALUE))
+                        .addComponent(jBtnVjrPesquisar)
+                        .addContainerGap(21, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(29, 29, 29)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLblVjrCodigo)
+                                    .addComponent(jTxtVjrCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLblVjrNome)
+                                .addComponent(jTxtVjrNome, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLblVjrMarca)
+                            .addComponent(jTxtVjrMarca, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jFmtVjrPreco, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLblVjrPreco))
+                        .addGap(55, 55, 55)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLblVjrVolume)
+                            .addComponent(jFmtVjrVolume, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jFormattedTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLblVjrTeorAlcool))
+                        .addGap(65, 65, 65))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -169,14 +167,11 @@ public class JDlgVjrBebida extends javax.swing.JDialog {
                     .addComponent(jTxtVjrNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTxtVjrMarca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jFmtVjrVolume, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLblVjrDataValidade)
-                    .addComponent(jLblVjrStatus))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(40, 40, 40)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jFormattedTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTxtVjrStatus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jCheckBox1)
+                    .addComponent(jLblVjrDataValidade))
                 .addGap(35, 35, 35)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jBtnVjrIncluir)
@@ -185,7 +180,7 @@ public class JDlgVjrBebida extends javax.swing.JDialog {
                     .addComponent(jBtnVjrCancelar)
                     .addComponent(jBtnVjrConfirmar, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jBtnVjrPesquisar))
-                .addContainerGap(105, Short.MAX_VALUE))
+                .addContainerGap(99, Short.MAX_VALUE))
         );
 
         pack();
@@ -244,6 +239,7 @@ public class JDlgVjrBebida extends javax.swing.JDialog {
     private javax.swing.JButton jBtnVjrExcluir;
     private javax.swing.JButton jBtnVjrIncluir;
     private javax.swing.JButton jBtnVjrPesquisar;
+    private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JFormattedTextField jFmtVjrPreco;
     private javax.swing.JFormattedTextField jFmtVjrVolume;
     private javax.swing.JFormattedTextField jFormattedTextField2;
@@ -253,12 +249,10 @@ public class JDlgVjrBebida extends javax.swing.JDialog {
     private javax.swing.JLabel jLblVjrMarca;
     private javax.swing.JLabel jLblVjrNome;
     private javax.swing.JLabel jLblVjrPreco;
-    private javax.swing.JLabel jLblVjrStatus;
     private javax.swing.JLabel jLblVjrTeorAlcool;
     private javax.swing.JLabel jLblVjrVolume;
     private javax.swing.JTextField jTxtVjrCodigo;
     private javax.swing.JTextField jTxtVjrMarca;
     private javax.swing.JTextField jTxtVjrNome;
-    private javax.swing.JTextField jTxtVjrStatus;
     // End of variables declaration//GEN-END:variables
 }

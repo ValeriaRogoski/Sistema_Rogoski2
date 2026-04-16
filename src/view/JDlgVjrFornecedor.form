@@ -23,13 +23,345 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="400" max="32767" attributes="0"/>
+          <Group type="102" attributes="0">
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="jLblVjrCodigo" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTxtVjrCodigo" max="32767" attributes="0"/>
+                          <Component id="jLblVjrNomeForne" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLblVjrCnpj" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLblVjrInsEst" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTxtVjrNomeForne" alignment="0" pref="227" max="32767" attributes="0"/>
+                          <Component id="jFmtVjrCnpj" max="32767" attributes="0"/>
+                          <Component id="jTxtVjrInsEst" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
+                      <Component id="jBtnVjrIncluir" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="37" max="32767" attributes="0"/>
+                      <Component id="jBtnVjrAlterar" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Component id="jLblVjrStatus" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jTxtVjrStatus" min="-2" pref="140" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="jLblVjrEmail" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTxtVjrEmail" max="32767" attributes="0"/>
+                          <Component id="jLblVjrTelefone" min="-2" max="-2" attributes="0"/>
+                          <Component id="jFmtVjrTelefone" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jLblVjrCelular" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTxtVjrCelular" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jLblVjrDataCada" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTxtVjrDataCada" alignment="0" max="32767" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+                              <Component id="jBtnVjrExcluir" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace pref="37" max="32767" attributes="0"/>
+                              <Component id="jBtnVjrCancelar" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="jLblVjrBairro" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLblVjrEndereco" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTxtVjrEndereco" max="32767" attributes="0"/>
+                                  <Component id="jTxtVjrBairro" alignment="0" max="32767" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <Component id="jLblVjrCidade" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                      <Component id="jLblVjrEstado" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                          <Component id="jTxtVjrNumero" max="32767" attributes="0"/>
+                                          <Component id="jLblVjrNumero" max="32767" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" attributes="0">
+                                              <Component id="jLblVjrCep" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                          </Group>
+                                          <Component id="jFmtVjrCep" pref="112" max="32767" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="jBtnVjrConfirmar" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="jBtnVjrPesquisar" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="jTxtVjrCidade" min="-2" pref="171" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="jCboVjrEstado" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                      </Group>
+                  </Group>
+              </Group>
+              <EmptySpace pref="81" max="32767" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="300" max="32767" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLblVjrCodigo" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLblVjrDataCada" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLblVjrEndereco" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jTxtVjrCodigo" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTxtVjrDataCada" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTxtVjrEndereco" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLblVjrNomeForne" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLblVjrEmail" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLblVjrBairro" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jTxtVjrNomeForne" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTxtVjrEmail" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTxtVjrBairro" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLblVjrCnpj" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLblVjrTelefone" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLblVjrNumero" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLblVjrCep" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jFmtVjrCnpj" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jFmtVjrTelefone" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTxtVjrNumero" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
+                  <Component id="jFmtVjrCep" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLblVjrInsEst" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLblVjrCelular" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLblVjrCidade" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLblVjrEstado" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jTxtVjrInsEst" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTxtVjrCelular" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTxtVjrCidade" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jCboVjrEstado" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLblVjrStatus" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTxtVjrStatus" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jBtnVjrIncluir" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jBtnVjrAlterar" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jBtnVjrExcluir" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jBtnVjrCancelar" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jBtnVjrConfirmar" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jBtnVjrPesquisar" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="30" max="32767" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
   </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JLabel" name="jLblVjrCodigo">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="C&#xf3;digo:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTxtVjrCodigo">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLblVjrNomeForne">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Nome do Fornecedor:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLblVjrCnpj">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="CNPJ:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLblVjrInsEst">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Inscri&#xe7;&#xe3;o Estadual:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTxtVjrNomeForne">
+    </Component>
+    <Component class="javax.swing.JFormattedTextField" name="jFmtVjrCnpj">
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTxtVjrInsEst">
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTxtVjrEmail">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLblVjrEmail">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="E-mail:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLblVjrTelefone">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Telefone:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JFormattedTextField" name="jFmtVjrTelefone">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLblVjrCelular">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Celular:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTxtVjrCelular">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLblVjrEndereco">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Endere&#xe7;o:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTxtVjrNumero">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLblVjrNumero">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Numero (Logradouro):"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLblVjrBairro">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Bairro:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLblVjrCidade">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Cidade:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLblVjrEstado">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Estado:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLblVjrCep">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Cep:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLblVjrStatus">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Status:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLblVjrDataCada">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Data de Cadastro:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTxtVjrDataCada">
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTxtVjrBairro">
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTxtVjrEndereco">
+    </Component>
+    <Component class="javax.swing.JFormattedTextField" name="jFmtVjrCep">
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTxtVjrStatus">
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTxtVjrCidade">
+    </Component>
+    <Component class="javax.swing.JComboBox" name="jCboVjrEstado">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="4">
+            <StringItem index="0" value="Item 1"/>
+            <StringItem index="1" value="Item 2"/>
+            <StringItem index="2" value="Item 3"/>
+            <StringItem index="3" value="Item 4"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JButton" name="jBtnVjrIncluir">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/imagens/incluir.png"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Incluir"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="jBtnVjrAlterar">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/imagens/alterar.png"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Alterar"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="jBtnVjrExcluir">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/imagens/Excluir.png"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Excluir"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="jBtnVjrCancelar">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/imagens/cancelar.png"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Cancelar"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="jBtnVjrConfirmar">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/imagens/confirmar.png"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Confirmar"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="jBtnVjrPesquisar">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/imagens/pesquisar.png"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Pesquisar"/>
+      </Properties>
+    </Component>
+  </SubComponents>
 </Form>

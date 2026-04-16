@@ -64,7 +64,7 @@
                           <Component id="jFmtVjrTelefone" alignment="0" pref="228" max="32767" attributes="0"/>
                           <Component id="jFmtVjrCelular" alignment="0" max="32767" attributes="0"/>
                           <Component id="jLblVjrCelular" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLblVjrTelefone" min="-2" max="-2" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="jBtnVjrExcluir" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -75,7 +75,7 @@
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="jTxtVjrCodigo" min="-2" pref="174" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jFormattedTextField8" max="32767" attributes="0"/>
+                      <Component id="jFmtVjrNumero" max="32767" attributes="0"/>
                   </Group>
                   <Component id="jTxtVjrNome" alignment="0" max="32767" attributes="0"/>
                   <Group type="102" attributes="0">
@@ -166,7 +166,7 @@
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jTxtVjrCodigo" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jTxtVjrEndereco" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jFormattedTextField8" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jFmtVjrNumero" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -174,7 +174,7 @@
                   <Component id="jLblVjrSexo" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLblVjrBairro" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLblVjrEstado" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLblVjrTelefone" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -282,7 +282,7 @@
         <Property name="text" type="java.lang.String" value="Bairro:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel9">
+    <Component class="javax.swing.JLabel" name="jLblVjrTelefone">
       <Properties>
         <Property name="text" type="java.lang.String" value="Telefone:"/>
       </Properties>
@@ -342,7 +342,7 @@
         <Property name="text" type="java.lang.String" value="N&#xfa;mero - endere&#xe7;o:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JFormattedTextField" name="jFormattedTextField8">
+    <Component class="javax.swing.JFormattedTextField" name="jFmtVjrNumero">
     </Component>
     <Component class="javax.swing.JButton" name="jBtnVjrIncluir">
       <Properties>

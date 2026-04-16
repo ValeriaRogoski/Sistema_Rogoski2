@@ -42,7 +42,7 @@ public class JDlgVjrCliente extends javax.swing.JDialog {
         jLblVjrEndereco = new javax.swing.JLabel();
         jTxtVjrEndereco = new javax.swing.JTextField();
         jLblVjrBairro = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
+        jLblVjrTelefone = new javax.swing.JLabel();
         jFmtVjrTelefone = new javax.swing.JFormattedTextField();
         jLblVjrEmail = new javax.swing.JLabel();
         jTxtVjrEmail = new javax.swing.JTextField();
@@ -55,7 +55,7 @@ public class JDlgVjrCliente extends javax.swing.JDialog {
         jLblVjrCep = new javax.swing.JLabel();
         jFmtVjrCep = new javax.swing.JFormattedTextField();
         jLblVjrNumero = new javax.swing.JLabel();
-        jFormattedTextField8 = new javax.swing.JFormattedTextField();
+        jFmtVjrNumero = new javax.swing.JFormattedTextField();
         jBtnVjrIncluir = new javax.swing.JButton();
         jBtnVjrAlterar = new javax.swing.JButton();
         jBtnVjrExcluir = new javax.swing.JButton();
@@ -84,7 +84,7 @@ public class JDlgVjrCliente extends javax.swing.JDialog {
 
         jLblVjrBairro.setText("Bairro:");
 
-        jLabel9.setText("Telefone:");
+        jLblVjrTelefone.setText("Telefone:");
 
         jLblVjrEmail.setText("E-mail:");
 
@@ -154,7 +154,7 @@ public class JDlgVjrCliente extends javax.swing.JDialog {
                             .addComponent(jFmtVjrTelefone, javax.swing.GroupLayout.DEFAULT_SIZE, 228, Short.MAX_VALUE)
                             .addComponent(jFmtVjrCelular)
                             .addComponent(jLblVjrCelular)
-                            .addComponent(jLabel9)
+                            .addComponent(jLblVjrTelefone)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jBtnVjrExcluir)
                                 .addGap(18, 18, 18)
@@ -162,7 +162,7 @@ public class JDlgVjrCliente extends javax.swing.JDialog {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jTxtVjrCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jFormattedTextField8))
+                        .addComponent(jFmtVjrNumero))
                     .addComponent(jTxtVjrNome)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -229,14 +229,14 @@ public class JDlgVjrCliente extends javax.swing.JDialog {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTxtVjrCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTxtVjrEndereco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jFormattedTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jFmtVjrNumero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLblVjrCpf)
                     .addComponent(jLblVjrSexo)
                     .addComponent(jLblVjrBairro)
                     .addComponent(jLblVjrEstado)
-                    .addComponent(jLabel9))
+                    .addComponent(jLblVjrTelefone))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jFmtVjrCpf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -328,10 +328,9 @@ public class JDlgVjrCliente extends javax.swing.JDialog {
     private javax.swing.JFormattedTextField jFmtVjrCep;
     private javax.swing.JFormattedTextField jFmtVjrCpf;
     private javax.swing.JFormattedTextField jFmtVjrDataNasc;
+    private javax.swing.JFormattedTextField jFmtVjrNumero;
     private javax.swing.JFormattedTextField jFmtVjrRg;
     private javax.swing.JFormattedTextField jFmtVjrTelefone;
-    private javax.swing.JFormattedTextField jFormattedTextField8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel jLblVjrBairro;
     private javax.swing.JLabel jLblVjrCelular;
     private javax.swing.JLabel jLblVjrCep;
@@ -346,6 +345,7 @@ public class JDlgVjrCliente extends javax.swing.JDialog {
     private javax.swing.JLabel jLblVjrNumero;
     private javax.swing.JLabel jLblVjrRg;
     private javax.swing.JLabel jLblVjrSexo;
+    private javax.swing.JLabel jLblVjrTelefone;
     private javax.swing.JTextField jTxtVjrBairro;
     private javax.swing.JTextField jTxtVjrCidade;
     private javax.swing.JTextField jTxtVjrCodigo;
