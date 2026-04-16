@@ -48,13 +48,11 @@ public class JDlgVjrFornecedor extends javax.swing.JDialog {
         jLblVjrCidade = new javax.swing.JLabel();
         jLblVjrEstado = new javax.swing.JLabel();
         jLblVjrCep = new javax.swing.JLabel();
-        jLblVjrStatus = new javax.swing.JLabel();
         jLblVjrDataCada = new javax.swing.JLabel();
         jTxtVjrDataCada = new javax.swing.JTextField();
         jTxtVjrBairro = new javax.swing.JTextField();
         jTxtVjrEndereco = new javax.swing.JTextField();
         jFmtVjrCep = new javax.swing.JFormattedTextField();
-        jTxtVjrStatus = new javax.swing.JTextField();
         jTxtVjrCidade = new javax.swing.JTextField();
         jCboVjrEstado = new javax.swing.JComboBox<>();
         jBtnVjrIncluir = new javax.swing.JButton();
@@ -63,6 +61,7 @@ public class JDlgVjrFornecedor extends javax.swing.JDialog {
         jBtnVjrCancelar = new javax.swing.JButton();
         jBtnVjrConfirmar = new javax.swing.JButton();
         jBtnVjrPesquisar = new javax.swing.JButton();
+        jCheckBox1 = new javax.swing.JCheckBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -92,8 +91,6 @@ public class JDlgVjrFornecedor extends javax.swing.JDialog {
 
         jLblVjrCep.setText("Cep:");
 
-        jLblVjrStatus.setText("Status:");
-
         jLblVjrDataCada.setText("Data de Cadastro:");
 
         jCboVjrEstado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
@@ -115,6 +112,8 @@ public class JDlgVjrFornecedor extends javax.swing.JDialog {
 
         jBtnVjrPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/pesquisar.png"))); // NOI18N
         jBtnVjrPesquisar.setText("Pesquisar");
+
+        jCheckBox1.setText("Ativo");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -140,10 +139,6 @@ public class JDlgVjrFornecedor extends javax.swing.JDialog {
                         .addComponent(jBtnVjrAlterar)))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLblVjrStatus)
-                        .addGap(18, 18, 18)
-                        .addComponent(jTxtVjrStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLblVjrEmail)
@@ -193,7 +188,10 @@ public class JDlgVjrFornecedor extends javax.swing.JDialog {
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(jTxtVjrCidade, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jCboVjrEstado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
+                                        .addComponent(jCboVjrEstado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(91, 91, 91)
+                        .addComponent(jCheckBox1)))
                 .addContainerGap(81, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -244,18 +242,16 @@ public class JDlgVjrFornecedor extends javax.swing.JDialog {
                     .addComponent(jTxtVjrCidade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jCboVjrEstado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLblVjrStatus)
-                    .addComponent(jTxtVjrStatus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jCheckBox1)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jBtnVjrIncluir)
                     .addComponent(jBtnVjrAlterar)
                     .addComponent(jBtnVjrExcluir)
                     .addComponent(jBtnVjrCancelar)
-                    .addComponent(jBtnVjrConfirmar)
+                    .addComponent(jBtnVjrConfirmar, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jBtnVjrPesquisar))
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addContainerGap(40, Short.MAX_VALUE))
         );
 
         pack();
@@ -311,6 +307,7 @@ public class JDlgVjrFornecedor extends javax.swing.JDialog {
     private javax.swing.JButton jBtnVjrIncluir;
     private javax.swing.JButton jBtnVjrPesquisar;
     private javax.swing.JComboBox<String> jCboVjrEstado;
+    private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JFormattedTextField jFmtVjrCep;
     private javax.swing.JFormattedTextField jFmtVjrCnpj;
     private javax.swing.JFormattedTextField jFmtVjrTelefone;
@@ -327,7 +324,6 @@ public class JDlgVjrFornecedor extends javax.swing.JDialog {
     private javax.swing.JLabel jLblVjrInsEst;
     private javax.swing.JLabel jLblVjrNomeForne;
     private javax.swing.JLabel jLblVjrNumero;
-    private javax.swing.JLabel jLblVjrStatus;
     private javax.swing.JLabel jLblVjrTelefone;
     private javax.swing.JTextField jTxtVjrBairro;
     private javax.swing.JTextField jTxtVjrCelular;
@@ -339,6 +335,5 @@ public class JDlgVjrFornecedor extends javax.swing.JDialog {
     private javax.swing.JTextField jTxtVjrInsEst;
     private javax.swing.JTextField jTxtVjrNomeForne;
     private javax.swing.JTextField jTxtVjrNumero;
-    private javax.swing.JTextField jTxtVjrStatus;
     // End of variables declaration//GEN-END:variables
 }
