@@ -20,7 +20,7 @@ public class JDlgVjrUsuario extends javax.swing.JDialog {
         initComponents();
         setTitle("Cadastro de Usuários");
         setLocationRelativeTo(null);
-        habilitar(true);
+        habilitar(false);
     }
     
     public void habilitar(boolean valor){

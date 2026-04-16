@@ -4,6 +4,8 @@
  */
 package view;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author u09208248119
@@ -16,6 +18,26 @@ public class JDlgVjrBebida extends javax.swing.JDialog {
     public JDlgVjrBebida(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        setTitle("Cadastro de Bebidas");
+        setLocationRelativeTo(null);
+        habilitar(false);
+    }
+    
+    public void habilitar(boolean valor){
+        jTxtVjrCodigo.setEnabled(valor);
+        jTxtVjrNome.setEnabled(valor);
+        jTxtVjrMarca.setEnabled(valor);
+        jFmtVjrVolume.setEnabled(valor);
+        jFmtVjrTeorAlcool.setEnabled(valor);
+        jFmtVjrPreco.setEnabled(valor);
+        jFmtVjrDataValidade.setEnabled(valor);
+        jCboVjrAtivo.setEnabled(valor);
+        jBtnVjrIncluir.setEnabled(!valor);
+        jBtnVjrAlterar.setEnabled(!valor);
+        jBtnVjrExcluir.setEnabled(!valor);
+        jBtnVjrCancelar.setEnabled(valor);
+        jBtnVjrConfirmar.setEnabled(valor);
+        jBtnVjrPesquisar.setEnabled(!valor);   
     }
 
     /**
@@ -38,8 +60,8 @@ public class JDlgVjrBebida extends javax.swing.JDialog {
         jLblVjrDataValidade = new javax.swing.JLabel();
         jTxtVjrMarca = new javax.swing.JTextField();
         jFmtVjrPreco = new javax.swing.JFormattedTextField();
-        jFormattedTextField2 = new javax.swing.JFormattedTextField();
-        jFormattedTextField3 = new javax.swing.JFormattedTextField();
+        jFmtVjrTeorAlcool = new javax.swing.JFormattedTextField();
+        jFmtVjrDataValidade = new javax.swing.JFormattedTextField();
         jFmtVjrVolume = new javax.swing.JFormattedTextField();
         jBtnVjrIncluir = new javax.swing.JButton();
         jBtnVjrAlterar = new javax.swing.JButton();
@@ -47,7 +69,7 @@ public class JDlgVjrBebida extends javax.swing.JDialog {
         jBtnVjrCancelar = new javax.swing.JButton();
         jBtnVjrConfirmar = new javax.swing.JButton();
         jBtnVjrPesquisar = new javax.swing.JButton();
-        jCheckBox1 = new javax.swing.JCheckBox();
+        jCboVjrAtivo = new javax.swing.JCheckBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -65,31 +87,55 @@ public class JDlgVjrBebida extends javax.swing.JDialog {
 
         jLblVjrDataValidade.setText("Data de Validade:");
 
-        jTxtVjrMarca.addActionListener(new java.awt.event.ActionListener() {
+        jBtnVjrIncluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/incluir.png"))); // NOI18N
+        jBtnVjrIncluir.setText("Incluir");
+        jBtnVjrIncluir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTxtVjrMarcaActionPerformed(evt);
+                jBtnVjrIncluirActionPerformed(evt);
             }
         });
 
-        jBtnVjrIncluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/incluir.png"))); // NOI18N
-        jBtnVjrIncluir.setText("Incluir");
-
         jBtnVjrAlterar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/alterar.png"))); // NOI18N
         jBtnVjrAlterar.setText("Alterar");
+        jBtnVjrAlterar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnVjrAlterarActionPerformed(evt);
+            }
+        });
 
         jBtnVjrExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Excluir.png"))); // NOI18N
         jBtnVjrExcluir.setText("Excluir");
+        jBtnVjrExcluir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnVjrExcluirActionPerformed(evt);
+            }
+        });
 
         jBtnVjrCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/cancelar.png"))); // NOI18N
         jBtnVjrCancelar.setText("Cancelar");
+        jBtnVjrCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnVjrCancelarActionPerformed(evt);
+            }
+        });
 
         jBtnVjrConfirmar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/confirmar.png"))); // NOI18N
         jBtnVjrConfirmar.setText("Confirmar");
+        jBtnVjrConfirmar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnVjrConfirmarActionPerformed(evt);
+            }
+        });
 
         jBtnVjrPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/pesquisar.png"))); // NOI18N
         jBtnVjrPesquisar.setText("Pesquisar");
+        jBtnVjrPesquisar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnVjrPesquisarActionPerformed(evt);
+            }
+        });
 
-        jCheckBox1.setText("Ativo");
+        jCboVjrAtivo.setText("Ativo");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -108,9 +154,9 @@ public class JDlgVjrBebida extends javax.swing.JDialog {
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jFormattedTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jFmtVjrDataValidade, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(75, 75, 75)
-                                .addComponent(jCheckBox1))
+                                .addComponent(jCboVjrAtivo))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jBtnVjrExcluir)
                                 .addGap(18, 18, 18)
@@ -140,7 +186,7 @@ public class JDlgVjrBebida extends javax.swing.JDialog {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLblVjrVolume)
                             .addComponent(jFmtVjrVolume, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jFormattedTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jFmtVjrTeorAlcool, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLblVjrTeorAlcool))
                         .addGap(65, 65, 65))))
         );
@@ -156,7 +202,7 @@ public class JDlgVjrBebida extends javax.swing.JDialog {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTxtVjrCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jFmtVjrPreco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jFormattedTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jFmtVjrTeorAlcool, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLblVjrNome)
@@ -169,8 +215,8 @@ public class JDlgVjrBebida extends javax.swing.JDialog {
                     .addComponent(jFmtVjrVolume, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(40, 40, 40)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jFormattedTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jCheckBox1)
+                    .addComponent(jFmtVjrDataValidade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jCboVjrAtivo)
                     .addComponent(jLblVjrDataValidade))
                 .addGap(35, 35, 35)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -186,9 +232,35 @@ public class JDlgVjrBebida extends javax.swing.JDialog {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTxtVjrMarcaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTxtVjrMarcaActionPerformed
+    private void jBtnVjrIncluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnVjrIncluirActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTxtVjrMarcaActionPerformed
+        habilitar(true);
+    }//GEN-LAST:event_jBtnVjrIncluirActionPerformed
+
+    private void jBtnVjrAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnVjrAlterarActionPerformed
+        // TODO add your handling code here:
+        habilitar(true);
+    }//GEN-LAST:event_jBtnVjrAlterarActionPerformed
+
+    private void jBtnVjrExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnVjrExcluirActionPerformed
+        // TODO add your handling code here:
+         JOptionPane.showConfirmDialog(null, "A exclusão não poderá ser desfeita.", JOptionPane.YES_NO_OPTION);
+    }//GEN-LAST:event_jBtnVjrExcluirActionPerformed
+
+    private void jBtnVjrCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnVjrCancelarActionPerformed
+        // TODO add your handling code here:
+        habilitar(false);
+    }//GEN-LAST:event_jBtnVjrCancelarActionPerformed
+
+    private void jBtnVjrConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnVjrConfirmarActionPerformed
+        // TODO add your handling code here:
+        habilitar(false);
+    }//GEN-LAST:event_jBtnVjrConfirmarActionPerformed
+
+    private void jBtnVjrPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnVjrPesquisarActionPerformed
+        // TODO add your handling code here:
+         JOptionPane.showInputDialog(null, "Informe o código do Cliente:");
+    }//GEN-LAST:event_jBtnVjrPesquisarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -239,11 +311,11 @@ public class JDlgVjrBebida extends javax.swing.JDialog {
     private javax.swing.JButton jBtnVjrExcluir;
     private javax.swing.JButton jBtnVjrIncluir;
     private javax.swing.JButton jBtnVjrPesquisar;
-    private javax.swing.JCheckBox jCheckBox1;
+    private javax.swing.JCheckBox jCboVjrAtivo;
+    private javax.swing.JFormattedTextField jFmtVjrDataValidade;
     private javax.swing.JFormattedTextField jFmtVjrPreco;
+    private javax.swing.JFormattedTextField jFmtVjrTeorAlcool;
     private javax.swing.JFormattedTextField jFmtVjrVolume;
-    private javax.swing.JFormattedTextField jFormattedTextField2;
-    private javax.swing.JFormattedTextField jFormattedTextField3;
     private javax.swing.JLabel jLblVjrCodigo;
     private javax.swing.JLabel jLblVjrDataValidade;
     private javax.swing.JLabel jLblVjrMarca;

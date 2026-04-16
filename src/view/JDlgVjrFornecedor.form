@@ -54,9 +54,7 @@
                           <Component id="jLblVjrTelefone" min="-2" max="-2" attributes="0"/>
                           <Component id="jFmtVjrTelefone" alignment="0" max="32767" attributes="0"/>
                           <Component id="jLblVjrCelular" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTxtVjrCelular" alignment="0" max="32767" attributes="0"/>
                           <Component id="jLblVjrDataCada" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTxtVjrDataCada" alignment="0" max="32767" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
                               <Component id="jBtnVjrExcluir" min="-2" max="-2" attributes="0"/>
@@ -64,6 +62,8 @@
                               <Component id="jBtnVjrCancelar" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                           </Group>
+                          <Component id="jFmtVjrCelular" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jFmtVjrDataCadastro" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
@@ -80,11 +80,14 @@
                                       <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                          <Component id="jTxtVjrNumero" max="32767" attributes="0"/>
-                                          <Component id="jLblVjrNumero" max="32767" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jLblVjrNumero" min="-2" max="-2" attributes="0"/>
+                                          <Group type="102" attributes="0">
+                                              <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
+                                              <Component id="jFmtVjrNumero" min="-2" pref="138" max="-2" attributes="0"/>
+                                          </Group>
                                       </Group>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" attributes="0">
                                               <Component id="jLblVjrCep" min="-2" max="-2" attributes="0"/>
@@ -98,7 +101,7 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
                                       <Component id="jBtnVjrConfirmar" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Component id="jBtnVjrPesquisar" min="-2" max="-2" attributes="0"/>
@@ -106,7 +109,7 @@
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="jTxtVjrCidade" min="-2" pref="171" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jCboVjrEstado" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTxtVjrEstado" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -114,10 +117,10 @@
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="91" max="-2" attributes="0"/>
-                      <Component id="jCheckBox1" min="-2" max="-2" attributes="0"/>
+                      <Component id="jCboVjrStatus" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="81" max="32767" attributes="0"/>
+              <EmptySpace pref="74" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -133,8 +136,8 @@
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jTxtVjrCodigo" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jTxtVjrDataCada" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jTxtVjrEndereco" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jFmtVjrDataCadastro" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -159,8 +162,8 @@
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jFmtVjrCnpj" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jFmtVjrTelefone" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jTxtVjrNumero" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
                   <Component id="jFmtVjrCep" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jFmtVjrNumero" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -172,12 +175,12 @@
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jTxtVjrInsEst" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jTxtVjrCelular" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jTxtVjrCidade" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jCboVjrEstado" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jFmtVjrCelular" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTxtVjrEstado" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="jCheckBox1" min="-2" max="-2" attributes="0"/>
+              <Component id="jCboVjrStatus" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jBtnVjrIncluir" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -240,14 +243,10 @@
         <Property name="text" type="java.lang.String" value="Celular:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTxtVjrCelular">
-    </Component>
     <Component class="javax.swing.JLabel" name="jLblVjrEndereco">
       <Properties>
         <Property name="text" type="java.lang.String" value="Endere&#xe7;o:"/>
       </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="jTxtVjrNumero">
     </Component>
     <Component class="javax.swing.JLabel" name="jLblVjrNumero">
       <Properties>
@@ -279,8 +278,6 @@
         <Property name="text" type="java.lang.String" value="Data de Cadastro:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTxtVjrDataCada">
-    </Component>
     <Component class="javax.swing.JTextField" name="jTxtVjrBairro">
     </Component>
     <Component class="javax.swing.JTextField" name="jTxtVjrEndereco">
@@ -289,21 +286,6 @@
     </Component>
     <Component class="javax.swing.JTextField" name="jTxtVjrCidade">
     </Component>
-    <Component class="javax.swing.JComboBox" name="jCboVjrEstado">
-      <Properties>
-        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="4">
-            <StringItem index="0" value="Item 1"/>
-            <StringItem index="1" value="Item 2"/>
-            <StringItem index="2" value="Item 3"/>
-            <StringItem index="3" value="Item 4"/>
-          </StringArray>
-        </Property>
-      </Properties>
-      <AuxValues>
-        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-      </AuxValues>
-    </Component>
     <Component class="javax.swing.JButton" name="jBtnVjrIncluir">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
@@ -311,6 +293,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Incluir"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBtnVjrIncluirActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jBtnVjrAlterar">
       <Properties>
@@ -319,6 +304,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Alterar"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBtnVjrAlterarActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jBtnVjrExcluir">
       <Properties>
@@ -327,6 +315,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Excluir"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBtnVjrExcluirActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jBtnVjrCancelar">
       <Properties>
@@ -335,6 +326,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Cancelar"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBtnVjrCancelarActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jBtnVjrConfirmar">
       <Properties>
@@ -343,6 +337,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Confirmar"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBtnVjrConfirmarActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jBtnVjrPesquisar">
       <Properties>
@@ -351,11 +348,22 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Pesquisar"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBtnVjrPesquisarActionPerformed"/>
+      </Events>
     </Component>
-    <Component class="javax.swing.JCheckBox" name="jCheckBox1">
+    <Component class="javax.swing.JCheckBox" name="jCboVjrStatus">
       <Properties>
         <Property name="text" type="java.lang.String" value="Ativo"/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JFormattedTextField" name="jFmtVjrCelular">
+    </Component>
+    <Component class="javax.swing.JFormattedTextField" name="jFmtVjrNumero">
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTxtVjrEstado">
+    </Component>
+    <Component class="javax.swing.JFormattedTextField" name="jFmtVjrDataCadastro">
     </Component>
   </SubComponents>
 </Form>

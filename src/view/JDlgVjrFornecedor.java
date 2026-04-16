@@ -4,6 +4,8 @@
  */
 package view;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author u09208248119
@@ -16,6 +18,34 @@ public class JDlgVjrFornecedor extends javax.swing.JDialog {
     public JDlgVjrFornecedor(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        setTitle("Cadastro de Fornecedor");
+        setLocationRelativeTo(null);
+        habilitar(false);
+    }
+    
+    public void habilitar(boolean valor){
+        jTxtVjrCodigo.setEnabled(valor);
+        jTxtVjrNomeForne.setEnabled(valor);
+        jFmtVjrCnpj.setEnabled(valor);
+        jTxtVjrInsEst.setEnabled(valor);
+        jTxtVjrEmail.setEnabled(valor);
+        jFmtVjrTelefone.setEnabled(valor);
+        jFmtVjrCelular.setEnabled(valor);
+        jTxtVjrEndereco.setEnabled(valor);
+        jFmtVjrNumero.setEnabled(valor);
+        jTxtVjrBairro.setEnabled(valor);
+        jTxtVjrCidade.setEnabled(valor);
+        jTxtVjrEstado.setEnabled(valor);
+        jFmtVjrCep.setEnabled(valor);
+        jCboVjrStatus.setEnabled(valor);
+        jFmtVjrDataCadastro.setEnabled(valor);
+        jBtnVjrIncluir.setEnabled(!valor);
+        jBtnVjrAlterar.setEnabled(!valor);
+        jBtnVjrExcluir.setEnabled(!valor);
+        jBtnVjrCancelar.setEnabled(valor);
+        jBtnVjrConfirmar.setEnabled(valor);
+        jBtnVjrPesquisar.setEnabled(!valor);
+                
     }
 
     /**
@@ -40,28 +70,28 @@ public class JDlgVjrFornecedor extends javax.swing.JDialog {
         jLblVjrTelefone = new javax.swing.JLabel();
         jFmtVjrTelefone = new javax.swing.JFormattedTextField();
         jLblVjrCelular = new javax.swing.JLabel();
-        jTxtVjrCelular = new javax.swing.JTextField();
         jLblVjrEndereco = new javax.swing.JLabel();
-        jTxtVjrNumero = new javax.swing.JTextField();
         jLblVjrNumero = new javax.swing.JLabel();
         jLblVjrBairro = new javax.swing.JLabel();
         jLblVjrCidade = new javax.swing.JLabel();
         jLblVjrEstado = new javax.swing.JLabel();
         jLblVjrCep = new javax.swing.JLabel();
         jLblVjrDataCada = new javax.swing.JLabel();
-        jTxtVjrDataCada = new javax.swing.JTextField();
         jTxtVjrBairro = new javax.swing.JTextField();
         jTxtVjrEndereco = new javax.swing.JTextField();
         jFmtVjrCep = new javax.swing.JFormattedTextField();
         jTxtVjrCidade = new javax.swing.JTextField();
-        jCboVjrEstado = new javax.swing.JComboBox<>();
         jBtnVjrIncluir = new javax.swing.JButton();
         jBtnVjrAlterar = new javax.swing.JButton();
         jBtnVjrExcluir = new javax.swing.JButton();
         jBtnVjrCancelar = new javax.swing.JButton();
         jBtnVjrConfirmar = new javax.swing.JButton();
         jBtnVjrPesquisar = new javax.swing.JButton();
-        jCheckBox1 = new javax.swing.JCheckBox();
+        jCboVjrStatus = new javax.swing.JCheckBox();
+        jFmtVjrCelular = new javax.swing.JFormattedTextField();
+        jFmtVjrNumero = new javax.swing.JFormattedTextField();
+        jTxtVjrEstado = new javax.swing.JTextField();
+        jFmtVjrDataCadastro = new javax.swing.JFormattedTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -93,27 +123,55 @@ public class JDlgVjrFornecedor extends javax.swing.JDialog {
 
         jLblVjrDataCada.setText("Data de Cadastro:");
 
-        jCboVjrEstado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
         jBtnVjrIncluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/incluir.png"))); // NOI18N
         jBtnVjrIncluir.setText("Incluir");
+        jBtnVjrIncluir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnVjrIncluirActionPerformed(evt);
+            }
+        });
 
         jBtnVjrAlterar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/alterar.png"))); // NOI18N
         jBtnVjrAlterar.setText("Alterar");
+        jBtnVjrAlterar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnVjrAlterarActionPerformed(evt);
+            }
+        });
 
         jBtnVjrExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Excluir.png"))); // NOI18N
         jBtnVjrExcluir.setText("Excluir");
+        jBtnVjrExcluir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnVjrExcluirActionPerformed(evt);
+            }
+        });
 
         jBtnVjrCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/cancelar.png"))); // NOI18N
         jBtnVjrCancelar.setText("Cancelar");
+        jBtnVjrCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnVjrCancelarActionPerformed(evt);
+            }
+        });
 
         jBtnVjrConfirmar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/confirmar.png"))); // NOI18N
         jBtnVjrConfirmar.setText("Confirmar");
+        jBtnVjrConfirmar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnVjrConfirmarActionPerformed(evt);
+            }
+        });
 
         jBtnVjrPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/pesquisar.png"))); // NOI18N
         jBtnVjrPesquisar.setText("Pesquisar");
+        jBtnVjrPesquisar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnVjrPesquisarActionPerformed(evt);
+            }
+        });
 
-        jCheckBox1.setText("Ativo");
+        jCboVjrStatus.setText("Ativo");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -146,15 +204,15 @@ public class JDlgVjrFornecedor extends javax.swing.JDialog {
                             .addComponent(jLblVjrTelefone)
                             .addComponent(jFmtVjrTelefone)
                             .addComponent(jLblVjrCelular)
-                            .addComponent(jTxtVjrCelular)
                             .addComponent(jLblVjrDataCada)
-                            .addComponent(jTxtVjrDataCada)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(16, 16, 16)
                                 .addComponent(jBtnVjrExcluir)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
                                 .addComponent(jBtnVjrCancelar)
-                                .addGap(30, 30, 30)))
+                                .addGap(30, 30, 30))
+                            .addComponent(jFmtVjrCelular)
+                            .addComponent(jFmtVjrDataCadastro))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(11, 11, 11)
@@ -169,10 +227,12 @@ public class JDlgVjrFornecedor extends javax.swing.JDialog {
                                         .addComponent(jLblVjrEstado)
                                         .addGap(36, 36, 36))
                                     .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                            .addComponent(jTxtVjrNumero)
-                                            .addComponent(jLblVjrNumero, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                        .addGap(18, 18, 18)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLblVjrNumero)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(1, 1, 1)
+                                                .addComponent(jFmtVjrNumero, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addGroup(layout.createSequentialGroup()
                                                 .addComponent(jLblVjrCep)
@@ -188,11 +248,11 @@ public class JDlgVjrFornecedor extends javax.swing.JDialog {
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(jTxtVjrCidade, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jCboVjrEstado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                                        .addComponent(jTxtVjrEstado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(91, 91, 91)
-                        .addComponent(jCheckBox1)))
-                .addContainerGap(81, Short.MAX_VALUE))
+                        .addComponent(jCboVjrStatus)))
+                .addContainerGap(74, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -205,8 +265,8 @@ public class JDlgVjrFornecedor extends javax.swing.JDialog {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTxtVjrCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTxtVjrDataCada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTxtVjrEndereco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTxtVjrEndereco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jFmtVjrDataCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLblVjrNomeForne)
@@ -227,8 +287,8 @@ public class JDlgVjrFornecedor extends javax.swing.JDialog {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jFmtVjrCnpj, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jFmtVjrTelefone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTxtVjrNumero, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jFmtVjrCep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jFmtVjrCep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jFmtVjrNumero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLblVjrInsEst)
@@ -238,11 +298,11 @@ public class JDlgVjrFornecedor extends javax.swing.JDialog {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTxtVjrInsEst, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTxtVjrCelular, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTxtVjrCidade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jCboVjrEstado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jFmtVjrCelular, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTxtVjrEstado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jCheckBox1)
+                .addComponent(jCboVjrStatus)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jBtnVjrIncluir)
@@ -256,6 +316,36 @@ public class JDlgVjrFornecedor extends javax.swing.JDialog {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jBtnVjrIncluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnVjrIncluirActionPerformed
+        // TODO add your handling code here:
+        habilitar(true);
+    }//GEN-LAST:event_jBtnVjrIncluirActionPerformed
+
+    private void jBtnVjrAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnVjrAlterarActionPerformed
+        // TODO add your handling code here:
+        habilitar(true);
+    }//GEN-LAST:event_jBtnVjrAlterarActionPerformed
+
+    private void jBtnVjrExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnVjrExcluirActionPerformed
+        // TODO add your handling code here:
+         JOptionPane.showConfirmDialog(null, "A exclusão não poderá ser desfeita.", JOptionPane.YES_NO_OPTION);
+    }//GEN-LAST:event_jBtnVjrExcluirActionPerformed
+
+    private void jBtnVjrCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnVjrCancelarActionPerformed
+        // TODO add your handling code here:
+        habilitar(false);
+    }//GEN-LAST:event_jBtnVjrCancelarActionPerformed
+
+    private void jBtnVjrConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnVjrConfirmarActionPerformed
+        // TODO add your handling code here:
+        habilitar(false);
+    }//GEN-LAST:event_jBtnVjrConfirmarActionPerformed
+
+    private void jBtnVjrPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnVjrPesquisarActionPerformed
+        // TODO add your handling code here:
+          JOptionPane.showInputDialog(null, "Informe o código do Cliente:");
+    }//GEN-LAST:event_jBtnVjrPesquisarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -306,10 +396,12 @@ public class JDlgVjrFornecedor extends javax.swing.JDialog {
     private javax.swing.JButton jBtnVjrExcluir;
     private javax.swing.JButton jBtnVjrIncluir;
     private javax.swing.JButton jBtnVjrPesquisar;
-    private javax.swing.JComboBox<String> jCboVjrEstado;
-    private javax.swing.JCheckBox jCheckBox1;
+    private javax.swing.JCheckBox jCboVjrStatus;
+    private javax.swing.JFormattedTextField jFmtVjrCelular;
     private javax.swing.JFormattedTextField jFmtVjrCep;
     private javax.swing.JFormattedTextField jFmtVjrCnpj;
+    private javax.swing.JFormattedTextField jFmtVjrDataCadastro;
+    private javax.swing.JFormattedTextField jFmtVjrNumero;
     private javax.swing.JFormattedTextField jFmtVjrTelefone;
     private javax.swing.JLabel jLblVjrBairro;
     private javax.swing.JLabel jLblVjrCelular;
@@ -326,14 +418,12 @@ public class JDlgVjrFornecedor extends javax.swing.JDialog {
     private javax.swing.JLabel jLblVjrNumero;
     private javax.swing.JLabel jLblVjrTelefone;
     private javax.swing.JTextField jTxtVjrBairro;
-    private javax.swing.JTextField jTxtVjrCelular;
     private javax.swing.JTextField jTxtVjrCidade;
     private javax.swing.JTextField jTxtVjrCodigo;
-    private javax.swing.JTextField jTxtVjrDataCada;
     private javax.swing.JTextField jTxtVjrEmail;
     private javax.swing.JTextField jTxtVjrEndereco;
+    private javax.swing.JTextField jTxtVjrEstado;
     private javax.swing.JTextField jTxtVjrInsEst;
     private javax.swing.JTextField jTxtVjrNomeForne;
-    private javax.swing.JTextField jTxtVjrNumero;
     // End of variables declaration//GEN-END:variables
 }

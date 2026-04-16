@@ -4,6 +4,8 @@
  */
 package view;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author u09208248119
@@ -363,7 +365,7 @@ public class JDlgVjrCliente extends javax.swing.JDialog {
 
     private void jBtnVjrPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnVjrPesquisarActionPerformed
         // TODO add your handling code here:
-         JOptionPane.showInputDialog(null, "Informe o código do Cliente:");
+         JOptionPane.showInputDialog(null, "Por favor, Informe o código do Cliente!");
     }//GEN-LAST:event_jBtnVjrPesquisarActionPerformed
 
     /**
