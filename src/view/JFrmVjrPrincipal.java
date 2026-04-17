@@ -15,6 +15,8 @@ public class JFrmVjrPrincipal extends javax.swing.JFrame {
      */
     public JFrmVjrPrincipal() {
         initComponents();
+        setTitle("Sistema de Compra e Venda de bebidas");
+        setLocationRelativeTo(null);
     }
     
    

@@ -135,7 +135,7 @@ public class JDlgVjrUsuario extends javax.swing.JDialog {
 
         jChbVjrAtivo.setText("Ativo");
 
-        jCboVjrNivel.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jCboVjrNivel.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Bronze", "Prata", "Ouro" }));
 
         jLabel1.setText("Código:");
 
@@ -150,9 +150,7 @@ public class JDlgVjrUsuario extends javax.swing.JDialog {
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(55, 55, 55)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLblVjrApelido)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addComponent(jLblVjrApelido)
                                     .addGroup(layout.createSequentialGroup()
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                             .addComponent(jTxtVjrApelido, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -251,7 +249,8 @@ public class JDlgVjrUsuario extends javax.swing.JDialog {
 
     private void jBtnVjrExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnVjrExcluirActionPerformed
         // TODO add your handling code here:
-        JOptionPane.showConfirmDialog(null, "Confirmar a exclusão?");
+        JOptionPane.showConfirmDialog(null, "A exclusão não poderá ser desfeita. Deseja continuar?",
+            "Excluir registro", JOptionPane.YES_NO_OPTION);
     }//GEN-LAST:event_jBtnVjrExcluirActionPerformed
 
     private void jBtnVjrCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnVjrCancelarActionPerformed
@@ -266,7 +265,7 @@ public class JDlgVjrUsuario extends javax.swing.JDialog {
 
     private void jBtnVjrPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnVjrPesquisarActionPerformed
         // TODO add your handling code here:
-        JOptionPane.showConfirmDialog(null, "Porfavor, informe o código do cliente!");
+          JOptionPane.showInputDialog(null, "Informe o código do Cliente:");
     }//GEN-LAST:event_jBtnVjrPesquisarActionPerformed
 
     /**

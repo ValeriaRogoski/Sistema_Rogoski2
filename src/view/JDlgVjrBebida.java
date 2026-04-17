@@ -244,7 +244,8 @@ public class JDlgVjrBebida extends javax.swing.JDialog {
 
     private void jBtnVjrExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnVjrExcluirActionPerformed
         // TODO add your handling code here:
-         JOptionPane.showConfirmDialog(null, "A exclusão não poderá ser desfeita.", JOptionPane.YES_NO_OPTION);
+         JOptionPane.showConfirmDialog(null, "A exclusão não poderá ser desfeita. Deseja continuar?",
+            "Excluir registro", JOptionPane.YES_NO_OPTION);
     }//GEN-LAST:event_jBtnVjrExcluirActionPerformed
 
     private void jBtnVjrCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnVjrCancelarActionPerformed

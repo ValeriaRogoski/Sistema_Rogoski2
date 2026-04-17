@@ -30,10 +30,7 @@
                           <Group type="102" attributes="0">
                               <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <Component id="jLblVjrApelido" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="32767" attributes="0"/>
-                                  </Group>
+                                  <Component id="jLblVjrApelido" min="-2" max="-2" attributes="0"/>
                                   <Group type="102" attributes="0">
                                       <Group type="103" groupAlignment="1" attributes="0">
                                           <Component id="jTxtVjrApelido" min="-2" pref="300" max="-2" attributes="0"/>
@@ -255,11 +252,10 @@
     <Component class="javax.swing.JComboBox" name="jCboVjrNivel">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="4">
-            <StringItem index="0" value="Item 1"/>
-            <StringItem index="1" value="Item 2"/>
-            <StringItem index="2" value="Item 3"/>
-            <StringItem index="3" value="Item 4"/>
+          <StringArray count="3">
+            <StringItem index="0" value="Bronze"/>
+            <StringItem index="1" value="Prata"/>
+            <StringItem index="2" value="Ouro"/>
           </StringArray>
         </Property>
       </Properties>

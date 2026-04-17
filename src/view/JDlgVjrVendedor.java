@@ -244,7 +244,8 @@ public class JDlgVjrVendedor extends javax.swing.JDialog {
 
     private void jBtnVjrExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnVjrExcluirActionPerformed
         // TODO add your handling code here:
-        JOptionPane.showConfirmDialog(null, "Confirmar a exclusão?");
+        JOptionPane.showConfirmDialog(null, "A exclusão não poderá ser desfeita. Deseja continuar?",
+            "Excluir registro", JOptionPane.YES_NO_OPTION);
     }//GEN-LAST:event_jBtnVjrExcluirActionPerformed
 
     private void jBtnVjrCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnVjrCancelarActionPerformed
@@ -259,7 +260,7 @@ public class JDlgVjrVendedor extends javax.swing.JDialog {
 
     private void jBtnVjrPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnVjrPesquisarActionPerformed
         // TODO add your handling code here:
-        JOptionPane.showConfirmDialog(null, "Porfavor, informe o código do cliente!");
+          JOptionPane.showInputDialog(null, "Informe o código do Cliente:");
     }//GEN-LAST:event_jBtnVjrPesquisarActionPerformed
 
     /**

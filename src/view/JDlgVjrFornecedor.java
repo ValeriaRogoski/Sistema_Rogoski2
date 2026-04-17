@@ -248,7 +248,7 @@ public class JDlgVjrFornecedor extends javax.swing.JDialog {
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(jTxtVjrCidade, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTxtVjrEstado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                                        .addComponent(jTxtVjrEstado, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(91, 91, 91)
                         .addComponent(jCboVjrStatus)))
@@ -329,7 +329,8 @@ public class JDlgVjrFornecedor extends javax.swing.JDialog {
 
     private void jBtnVjrExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnVjrExcluirActionPerformed
         // TODO add your handling code here:
-         JOptionPane.showConfirmDialog(null, "A exclusão não poderá ser desfeita.", JOptionPane.YES_NO_OPTION);
+         JOptionPane.showConfirmDialog(null, "A exclusão não poderá ser desfeita. Deseja continuar?",
+            "Excluir registro", JOptionPane.YES_NO_OPTION);
     }//GEN-LAST:event_jBtnVjrExcluirActionPerformed
 
     private void jBtnVjrCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnVjrCancelarActionPerformed
@@ -344,7 +345,7 @@ public class JDlgVjrFornecedor extends javax.swing.JDialog {
 
     private void jBtnVjrPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnVjrPesquisarActionPerformed
         // TODO add your handling code here:
-          JOptionPane.showInputDialog(null, "Informe o código do Cliente:");
+              JOptionPane.showInputDialog(null, "Informe o código do Cliente:");
     }//GEN-LAST:event_jBtnVjrPesquisarActionPerformed
 
     /**

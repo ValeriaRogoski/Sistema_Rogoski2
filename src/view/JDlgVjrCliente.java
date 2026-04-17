@@ -106,7 +106,7 @@ public class JDlgVjrCliente extends javax.swing.JDialog {
 
         jLblVjrSexo.setText("Sexo:");
 
-        jCboVjrSexo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jCboVjrSexo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Masculino", "Femenino", "Prefiro não informar", " " }));
 
         jLblVjrDataNasc.setText("Data de Nascimento:");
 
@@ -350,7 +350,8 @@ public class JDlgVjrCliente extends javax.swing.JDialog {
 
     private void jBtnVjrExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnVjrExcluirActionPerformed
         // TODO add your handling code here:
-        JOptionPane.showConfirmDialog(null,"Excluir registro", JOptionPane.YES_NO_OPTION);
+       JOptionPane.showConfirmDialog(null, "A exclusão não poderá ser desfeita. Deseja continuar?",
+            "Excluir registro", JOptionPane.YES_NO_OPTION);
     }//GEN-LAST:event_jBtnVjrExcluirActionPerformed
 
     private void jBtnVjrCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnVjrCancelarActionPerformed
@@ -365,7 +366,7 @@ public class JDlgVjrCliente extends javax.swing.JDialog {
 
     private void jBtnVjrPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnVjrPesquisarActionPerformed
         // TODO add your handling code here:
-         JOptionPane.showInputDialog(null, "Por favor, Informe o código do Cliente!");
+           JOptionPane.showInputDialog(null, "Informe o código do Cliente:");
     }//GEN-LAST:event_jBtnVjrPesquisarActionPerformed
 
     /**
