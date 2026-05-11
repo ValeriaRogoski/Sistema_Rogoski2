@@ -31,7 +31,7 @@ public class JDlgVjrBebida extends javax.swing.JDialog {
         jFmtVjrTeorAlcool.setEnabled(valor);
         jFmtVjrPreco.setEnabled(valor);
         jFmtVjrDataValidade.setEnabled(valor);
-        jCboVjrAtivo.setEnabled(valor);
+        jChbVjrAtivo.setEnabled(valor);
         jBtnVjrIncluir.setEnabled(!valor);
         jBtnVjrAlterar.setEnabled(!valor);
         jBtnVjrExcluir.setEnabled(!valor);
@@ -69,7 +69,7 @@ public class JDlgVjrBebida extends javax.swing.JDialog {
         jBtnVjrCancelar = new javax.swing.JButton();
         jBtnVjrConfirmar = new javax.swing.JButton();
         jBtnVjrPesquisar = new javax.swing.JButton();
-        jCboVjrAtivo = new javax.swing.JCheckBox();
+        jChbVjrAtivo = new javax.swing.JCheckBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -135,7 +135,7 @@ public class JDlgVjrBebida extends javax.swing.JDialog {
             }
         });
 
-        jCboVjrAtivo.setText("Ativo");
+        jChbVjrAtivo.setText("Ativo");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -156,7 +156,7 @@ public class JDlgVjrBebida extends javax.swing.JDialog {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jFmtVjrDataValidade, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(75, 75, 75)
-                                .addComponent(jCboVjrAtivo))
+                                .addComponent(jChbVjrAtivo))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jBtnVjrExcluir)
                                 .addGap(18, 18, 18)
@@ -216,7 +216,7 @@ public class JDlgVjrBebida extends javax.swing.JDialog {
                 .addGap(40, 40, 40)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jFmtVjrDataValidade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jCboVjrAtivo)
+                    .addComponent(jChbVjrAtivo)
                     .addComponent(jLblVjrDataValidade))
                 .addGap(35, 35, 35)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -260,7 +260,7 @@ public class JDlgVjrBebida extends javax.swing.JDialog {
 
     private void jBtnVjrPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnVjrPesquisarActionPerformed
         // TODO add your handling code here:
-         JOptionPane.showInputDialog(null, "Informe o código do Cliente:");
+         JOptionPane.showInputDialog(null, "Informe o código da Bebida:");
     }//GEN-LAST:event_jBtnVjrPesquisarActionPerformed
 
     /**
@@ -312,7 +312,7 @@ public class JDlgVjrBebida extends javax.swing.JDialog {
     private javax.swing.JButton jBtnVjrExcluir;
     private javax.swing.JButton jBtnVjrIncluir;
     private javax.swing.JButton jBtnVjrPesquisar;
-    private javax.swing.JCheckBox jCboVjrAtivo;
+    private javax.swing.JCheckBox jChbVjrAtivo;
     private javax.swing.JFormattedTextField jFmtVjrDataValidade;
     private javax.swing.JFormattedTextField jFmtVjrPreco;
     private javax.swing.JFormattedTextField jFmtVjrTeorAlcool;

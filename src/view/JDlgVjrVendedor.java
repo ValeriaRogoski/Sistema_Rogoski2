@@ -260,7 +260,7 @@ public class JDlgVjrVendedor extends javax.swing.JDialog {
 
     private void jBtnVjrPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnVjrPesquisarActionPerformed
         // TODO add your handling code here:
-          JOptionPane.showInputDialog(null, "Informe o código do Cliente:");
+          JOptionPane.showInputDialog(null, "Informe o código do Vendedor:");
     }//GEN-LAST:event_jBtnVjrPesquisarActionPerformed
 
     /**

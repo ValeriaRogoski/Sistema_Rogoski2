@@ -27,7 +27,7 @@ public class JDlgVjrFornecedor extends javax.swing.JDialog {
         jTxtVjrCodigo.setEnabled(valor);
         jTxtVjrNomeForne.setEnabled(valor);
         jFmtVjrCnpj.setEnabled(valor);
-        jTxtVjrInsEst.setEnabled(valor);
+        jFmtVjrInsEst.setEnabled(valor);
         jTxtVjrEmail.setEnabled(valor);
         jFmtVjrTelefone.setEnabled(valor);
         jFmtVjrCelular.setEnabled(valor);
@@ -37,7 +37,7 @@ public class JDlgVjrFornecedor extends javax.swing.JDialog {
         jTxtVjrCidade.setEnabled(valor);
         jTxtVjrEstado.setEnabled(valor);
         jFmtVjrCep.setEnabled(valor);
-        jCboVjrStatus.setEnabled(valor);
+        jChbVjrStatus.setEnabled(valor);
         jFmtVjrDataCadastro.setEnabled(valor);
         jBtnVjrIncluir.setEnabled(!valor);
         jBtnVjrAlterar.setEnabled(!valor);
@@ -64,7 +64,6 @@ public class JDlgVjrFornecedor extends javax.swing.JDialog {
         jLblVjrInsEst = new javax.swing.JLabel();
         jTxtVjrNomeForne = new javax.swing.JTextField();
         jFmtVjrCnpj = new javax.swing.JFormattedTextField();
-        jTxtVjrInsEst = new javax.swing.JTextField();
         jTxtVjrEmail = new javax.swing.JTextField();
         jLblVjrEmail = new javax.swing.JLabel();
         jLblVjrTelefone = new javax.swing.JLabel();
@@ -87,11 +86,12 @@ public class JDlgVjrFornecedor extends javax.swing.JDialog {
         jBtnVjrCancelar = new javax.swing.JButton();
         jBtnVjrConfirmar = new javax.swing.JButton();
         jBtnVjrPesquisar = new javax.swing.JButton();
-        jCboVjrStatus = new javax.swing.JCheckBox();
+        jChbVjrStatus = new javax.swing.JCheckBox();
         jFmtVjrCelular = new javax.swing.JFormattedTextField();
         jFmtVjrNumero = new javax.swing.JFormattedTextField();
         jTxtVjrEstado = new javax.swing.JTextField();
         jFmtVjrDataCadastro = new javax.swing.JFormattedTextField();
+        jFmtVjrInsEst = new javax.swing.JFormattedTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -171,30 +171,33 @@ public class JDlgVjrFornecedor extends javax.swing.JDialog {
             }
         });
 
-        jCboVjrStatus.setText("Ativo");
+        jChbVjrStatus.setText("Ativo");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(layout.createSequentialGroup()
+                            .addContainerGap()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jLblVjrCodigo)
+                                .addComponent(jTxtVjrCodigo)
+                                .addComponent(jLblVjrNomeForne)
+                                .addComponent(jLblVjrCnpj)
+                                .addComponent(jLblVjrInsEst)
+                                .addComponent(jTxtVjrNomeForne, javax.swing.GroupLayout.DEFAULT_SIZE, 227, Short.MAX_VALUE)
+                                .addComponent(jFmtVjrCnpj)))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(52, 52, 52)
+                            .addComponent(jBtnVjrIncluir)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
+                            .addComponent(jBtnVjrAlterar)))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLblVjrCodigo)
-                            .addComponent(jTxtVjrCodigo)
-                            .addComponent(jLblVjrNomeForne)
-                            .addComponent(jLblVjrCnpj)
-                            .addComponent(jLblVjrInsEst)
-                            .addComponent(jTxtVjrNomeForne, javax.swing.GroupLayout.DEFAULT_SIZE, 227, Short.MAX_VALUE)
-                            .addComponent(jFmtVjrCnpj)
-                            .addComponent(jTxtVjrInsEst)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(52, 52, 52)
-                        .addComponent(jBtnVjrIncluir)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
-                        .addComponent(jBtnVjrAlterar)))
+                        .addComponent(jFmtVjrInsEst, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -251,7 +254,7 @@ public class JDlgVjrFornecedor extends javax.swing.JDialog {
                                         .addComponent(jTxtVjrEstado, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(91, 91, 91)
-                        .addComponent(jCboVjrStatus)))
+                        .addComponent(jChbVjrStatus)))
                 .addContainerGap(74, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -297,12 +300,12 @@ public class JDlgVjrFornecedor extends javax.swing.JDialog {
                     .addComponent(jLblVjrEstado))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTxtVjrInsEst, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTxtVjrCidade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jFmtVjrCelular, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTxtVjrEstado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTxtVjrEstado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jFmtVjrInsEst, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jCboVjrStatus)
+                .addComponent(jChbVjrStatus)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jBtnVjrIncluir)
@@ -345,7 +348,7 @@ public class JDlgVjrFornecedor extends javax.swing.JDialog {
 
     private void jBtnVjrPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnVjrPesquisarActionPerformed
         // TODO add your handling code here:
-              JOptionPane.showInputDialog(null, "Informe o código do Cliente:");
+              JOptionPane.showInputDialog(null, "Informe o código do Fornecedor:");
     }//GEN-LAST:event_jBtnVjrPesquisarActionPerformed
 
     /**
@@ -397,11 +400,12 @@ public class JDlgVjrFornecedor extends javax.swing.JDialog {
     private javax.swing.JButton jBtnVjrExcluir;
     private javax.swing.JButton jBtnVjrIncluir;
     private javax.swing.JButton jBtnVjrPesquisar;
-    private javax.swing.JCheckBox jCboVjrStatus;
+    private javax.swing.JCheckBox jChbVjrStatus;
     private javax.swing.JFormattedTextField jFmtVjrCelular;
     private javax.swing.JFormattedTextField jFmtVjrCep;
     private javax.swing.JFormattedTextField jFmtVjrCnpj;
     private javax.swing.JFormattedTextField jFmtVjrDataCadastro;
+    private javax.swing.JFormattedTextField jFmtVjrInsEst;
     private javax.swing.JFormattedTextField jFmtVjrNumero;
     private javax.swing.JFormattedTextField jFmtVjrTelefone;
     private javax.swing.JLabel jLblVjrBairro;
@@ -424,7 +428,6 @@ public class JDlgVjrFornecedor extends javax.swing.JDialog {
     private javax.swing.JTextField jTxtVjrEmail;
     private javax.swing.JTextField jTxtVjrEndereco;
     private javax.swing.JTextField jTxtVjrEstado;
-    private javax.swing.JTextField jTxtVjrInsEst;
     private javax.swing.JTextField jTxtVjrNomeForne;
     // End of variables declaration//GEN-END:variables
 }

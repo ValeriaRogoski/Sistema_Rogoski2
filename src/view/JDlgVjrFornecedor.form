@@ -24,25 +24,30 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="jLblVjrCodigo" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTxtVjrCodigo" max="32767" attributes="0"/>
-                          <Component id="jLblVjrNomeForne" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLblVjrCnpj" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLblVjrInsEst" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTxtVjrNomeForne" alignment="0" pref="227" max="32767" attributes="0"/>
-                          <Component id="jFmtVjrCnpj" max="32767" attributes="0"/>
-                          <Component id="jTxtVjrInsEst" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="jLblVjrCodigo" min="-2" max="-2" attributes="0"/>
+                              <Component id="jTxtVjrCodigo" max="32767" attributes="0"/>
+                              <Component id="jLblVjrNomeForne" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLblVjrCnpj" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLblVjrInsEst" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jTxtVjrNomeForne" alignment="0" pref="227" max="32767" attributes="0"/>
+                              <Component id="jFmtVjrCnpj" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
+                          <Component id="jBtnVjrIncluir" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace pref="37" max="32767" attributes="0"/>
+                          <Component id="jBtnVjrAlterar" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
-                      <Component id="jBtnVjrIncluir" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="37" max="32767" attributes="0"/>
-                      <Component id="jBtnVjrAlterar" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jFmtVjrInsEst" min="-2" pref="227" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -117,7 +122,7 @@
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="91" max="-2" attributes="0"/>
-                      <Component id="jCboVjrStatus" min="-2" max="-2" attributes="0"/>
+                      <Component id="jChbVjrStatus" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace pref="74" max="32767" attributes="0"/>
@@ -174,13 +179,13 @@
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jTxtVjrInsEst" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jTxtVjrCidade" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jFmtVjrCelular" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jTxtVjrEstado" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jFmtVjrInsEst" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="jCboVjrStatus" min="-2" max="-2" attributes="0"/>
+              <Component id="jChbVjrStatus" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jBtnVjrIncluir" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -221,8 +226,6 @@
     <Component class="javax.swing.JTextField" name="jTxtVjrNomeForne">
     </Component>
     <Component class="javax.swing.JFormattedTextField" name="jFmtVjrCnpj">
-    </Component>
-    <Component class="javax.swing.JTextField" name="jTxtVjrInsEst">
     </Component>
     <Component class="javax.swing.JTextField" name="jTxtVjrEmail">
     </Component>
@@ -352,7 +355,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBtnVjrPesquisarActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JCheckBox" name="jCboVjrStatus">
+    <Component class="javax.swing.JCheckBox" name="jChbVjrStatus">
       <Properties>
         <Property name="text" type="java.lang.String" value="Ativo"/>
       </Properties>
@@ -364,6 +367,8 @@
     <Component class="javax.swing.JTextField" name="jTxtVjrEstado">
     </Component>
     <Component class="javax.swing.JFormattedTextField" name="jFmtVjrDataCadastro">
+    </Component>
+    <Component class="javax.swing.JFormattedTextField" name="jFmtVjrInsEst">
     </Component>
   </SubComponents>
 </Form>

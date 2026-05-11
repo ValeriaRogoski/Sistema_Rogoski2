@@ -40,7 +40,7 @@
                           <Group type="102" attributes="0">
                               <Component id="jFmtVjrDataValidade" min="-2" pref="154" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
-                              <Component id="jCboVjrAtivo" min="-2" max="-2" attributes="0"/>
+                              <Component id="jChbVjrAtivo" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
                               <Component id="jBtnVjrExcluir" min="-2" max="-2" attributes="0"/>
@@ -118,7 +118,7 @@
               <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jFmtVjrDataValidade" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jCboVjrAtivo" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jChbVjrAtivo" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLblVjrDataValidade" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
@@ -251,7 +251,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBtnVjrPesquisarActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JCheckBox" name="jCboVjrAtivo">
+    <Component class="javax.swing.JCheckBox" name="jChbVjrAtivo">
       <Properties>
         <Property name="text" type="java.lang.String" value="Ativo"/>
       </Properties>
