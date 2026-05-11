@@ -4,7 +4,7 @@
  */
 package dao;
 
-import bean.VjrBebida;
+import bean.VjrCompraProduto;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -17,10 +17,10 @@ import dao.DaoVjrAbstract;
  *
  * @author u09208248119
  */
-public class DaoVjrBebida extends DaoVjrAbstract {
+public class DaoVjrCompraProduto extends DaoVjrAbstract{
     @Override
     public void insert(Object object) {
-        VjrBebida vjrBebida = (VjrBebida) object;
+        VjrCompraProduto vjrCompraProduto = (VjrCompraProduto) object;
         try {
             Class.forName("com.mysql.jdbc.Driver");
             String url, user, password;
@@ -29,15 +29,16 @@ public class DaoVjrBebida extends DaoVjrAbstract {
             password = "valeria_rogoski";
             Connection cnt;
             cnt = DriverManager.getConnection(url, user, password);
-            String sql = "insert into vjr_bebidas values (?,?,?,?,?,?,?)";
+            String sql = "insert into vjr_compra_produto values (?,?,?,?,?,?,?)";
             PreparedStatement pst = cnt.prepareStatement( sql );
-            pst.setInt(1, vjrBebida.getVjrIdBebida());
-            pst.setString(2, vjrBebida.getVjrNome());
-            pst.setString(3, vjrBebida.getVjrMarca());
-            pst.setInt(4, vjrBebida.getVjrVolume());
-            pst.setInt(5, vjrBebida.getVjrPreco());
-            pst.setDate(6, null);
-            pst.setString(7, vjrBebida.getVjrStatus());
+            pst.setInt(1, vjrCompraProduto.getVjrIdCodigo());
+            pst.setInt(2, vjrCompraProduto.getVjrPrecoUnitario());
+            pst.setInt(3, vjrCompraProduto.getVjrQuantidade());
+            pst.setInt(4, vjrCompraProduto.getVjrValorTotal());
+            pst.setInt(5, vjrCompraProduto.getVjrBebidaId());
+            pst.setInt(6, vjrCompraProduto.getVjrCompraId());
+            pst.setInt(7, vjrCompraProduto.getVjrIdCodigo());
+            
             pst.executeUpdate();
 
         } catch (ClassNotFoundException ex) {
@@ -47,9 +48,9 @@ public class DaoVjrBebida extends DaoVjrAbstract {
         }
     }
     
-     @Override
+    @Override
     public void update(Object object) {
-        VjrBebida vjrBebida = (VjrBebida) object;
+        VjrCompraProduto vjrCompraProduto = (VjrCompraProduto) object;
         try {
             Class.forName("com.mysql.jdbc.Driver");
             String url, user, password;
@@ -58,7 +59,7 @@ public class DaoVjrBebida extends DaoVjrAbstract {
             password = "valeria_rogoski";
             Connection cnt;
             cnt = DriverManager.getConnection(url, user, password);
-            PreparedStatement pst = cnt.prepareStatement("update set vjr_bebidas values(?,?,?,?,?,?,?) ");
+            PreparedStatement pst = cnt.prepareStatement("update set vjr_compra_produto values(?,?,?,?,?,?,?) ");
           
             pst.executeUpdate();
             
@@ -71,7 +72,7 @@ public class DaoVjrBebida extends DaoVjrAbstract {
 
     @Override
     public void delete(Object object) {
-        VjrBebida vjrBebida = (VjrBebida) object;
+        VjrCompraProduto vjrCompraProduto = (VjrCompraProduto) object;
         try {
             Class.forName("com.mysql.jdbc.Driver");
             String url, user, password;
@@ -80,7 +81,7 @@ public class DaoVjrBebida extends DaoVjrAbstract {
             password = "valeria_rogoski";
             Connection cnt;
             cnt = DriverManager.getConnection(url, user, password);
-            String sql = "delete from vjr_bebidas values(?,?,?,?,?,?,?) ";
+            String sql = "delete from vjr_compra_produto values(?,?,?,?,?,?,?) ";
             PreparedStatement pst = cnt.prepareStatement(sql);
             //
              pst.executeUpdate();

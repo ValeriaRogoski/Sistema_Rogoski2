@@ -27,28 +27,28 @@ public class VjrCompraProduto {
     /**
      * @return the VjrCompraId
      */
-    public String getVjrCompraId() {
+    public int getVjrCompraId() {
         return VjrCompraId;
     }
 
     /**
      * @param VjrCompraId the VjrCompraId to set
      */
-    public void setVjrCompraId(String VjrCompraId) {
+    public void setVjrCompraId(int VjrCompraId) {
         this.VjrCompraId = VjrCompraId;
     }
 
     /**
      * @return the VjrBebidaId
      */
-    public String getVjrBebidaId() {
+    public int getVjrBebidaId() {
         return VjrBebidaId;
     }
 
     /**
      * @param VjrBebidaId the VjrBebidaId to set
      */
-    public void setVjrBebidaId(String VjrBebidaId) {
+    public void setVjrBebidaId(int VjrBebidaId) {
         this.VjrBebidaId = VjrBebidaId;
     }
 
@@ -94,8 +94,8 @@ public class VjrCompraProduto {
         this.VjrValorTotal = VjrValorTotal;
     }
     private int VjrIdCodigo;
-    private String VjrCompraId;
-    private String VjrBebidaId;
+    private int VjrCompraId;
+    private int VjrBebidaId;
     private int VjrQuantidade;
     private int VjrPrecoUnitario;
     private int VjrValorTotal;

@@ -4,7 +4,7 @@
  */
 package dao;
 
-import bean.VjrBebida;
+import bean.VjrVenda;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -12,15 +12,14 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import dao.DaoVjrAbstract;
-
 /**
  *
  * @author u09208248119
  */
-public class DaoVjrBebida extends DaoVjrAbstract {
+public class DaoVjrVenda extends DaoVjrAbstract {
     @Override
     public void insert(Object object) {
-        VjrBebida vjrBebida = (VjrBebida) object;
+        VjrVenda vjrVenda = (VjrVenda) object;
         try {
             Class.forName("com.mysql.jdbc.Driver");
             String url, user, password;
@@ -29,27 +28,29 @@ public class DaoVjrBebida extends DaoVjrAbstract {
             password = "valeria_rogoski";
             Connection cnt;
             cnt = DriverManager.getConnection(url, user, password);
-            String sql = "insert into vjr_bebidas values (?,?,?,?,?,?,?)";
+            String sql = "insert into vjr_vendas values (?,?,?,?,?,?,?,?)";
             PreparedStatement pst = cnt.prepareStatement( sql );
-            pst.setInt(1, vjrBebida.getVjrIdBebida());
-            pst.setString(2, vjrBebida.getVjrNome());
-            pst.setString(3, vjrBebida.getVjrMarca());
-            pst.setInt(4, vjrBebida.getVjrVolume());
-            pst.setInt(5, vjrBebida.getVjrPreco());
-            pst.setDate(6, null);
-            pst.setString(7, vjrBebida.getVjrStatus());
+            pst.setInt(1, vjrVenda.getVjrIdVenda());
+            pst.setInt(2, vjrVenda.getVjrPrecoUnitario());
+            pst.setInt(3, vjrVenda.getVjrQuantidade());
+            pst.setInt(4, vjrVenda.getVjrValorTotal());
+            pst.setString(5, vjrVenda.getVjrClienteNome());
+            pst.setString(6, vjrVenda.getVjrFormaPagamento());
+            pst.setString(7, vjrVenda.getVjrProdutoNome());
+            pst.setDate(8, null);
+           
             pst.executeUpdate();
 
         } catch (ClassNotFoundException ex) {
-            Logger.getLogger(DaoVjrBebida.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(DaoVjrVenda.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {
-            Logger.getLogger(DaoVjrBebida.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(DaoVjrVenda.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     
-     @Override
+    @Override
     public void update(Object object) {
-        VjrBebida vjrBebida = (VjrBebida) object;
+        VjrVenda vjrVenda = (VjrVenda) object;
         try {
             Class.forName("com.mysql.jdbc.Driver");
             String url, user, password;
@@ -58,20 +59,20 @@ public class DaoVjrBebida extends DaoVjrAbstract {
             password = "valeria_rogoski";
             Connection cnt;
             cnt = DriverManager.getConnection(url, user, password);
-            PreparedStatement pst = cnt.prepareStatement("update set vjr_bebidas values(?,?,?,?,?,?,?) ");
+            PreparedStatement pst = cnt.prepareStatement("update set vjr_venda values(?,?,?,?,?,?,?,?) ");
           
             pst.executeUpdate();
             
         } catch (ClassNotFoundException ex) {
-            Logger.getLogger(DaoVjrBebida.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(DaoVjrVenda.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {
-            Logger.getLogger(DaoVjrBebida.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(DaoVjrVenda.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
     @Override
     public void delete(Object object) {
-        VjrBebida vjrBebida = (VjrBebida) object;
+        VjrVenda vjrVenda = (VjrVenda) object;
         try {
             Class.forName("com.mysql.jdbc.Driver");
             String url, user, password;
@@ -80,15 +81,15 @@ public class DaoVjrBebida extends DaoVjrAbstract {
             password = "valeria_rogoski";
             Connection cnt;
             cnt = DriverManager.getConnection(url, user, password);
-            String sql = "delete from vjr_bebidas values(?,?,?,?,?,?,?) ";
+            String sql = "delete from vjr_vendas values(?,?,?,?,?,?,?,?) ";
             PreparedStatement pst = cnt.prepareStatement(sql);
             //
              pst.executeUpdate();
             
         } catch (ClassNotFoundException ex) {
-            Logger.getLogger(DaoVjrBebida.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(DaoVjrVenda.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {
-            Logger.getLogger(DaoVjrBebida.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(DaoVjrVenda.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 

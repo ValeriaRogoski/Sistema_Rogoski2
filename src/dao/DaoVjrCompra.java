@@ -4,7 +4,8 @@
  */
 package dao;
 
-import bean.VjrBebida;
+
+import bean.VjrCompra;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -17,10 +18,10 @@ import dao.DaoVjrAbstract;
  *
  * @author u09208248119
  */
-public class DaoVjrBebida extends DaoVjrAbstract {
+public class DaoVjrCompra extends DaoVjrAbstract {
     @Override
     public void insert(Object object) {
-        VjrBebida vjrBebida = (VjrBebida) object;
+        VjrCompra vjrCompra = (VjrCompra) object;
         try {
             Class.forName("com.mysql.jdbc.Driver");
             String url, user, password;
@@ -29,15 +30,16 @@ public class DaoVjrBebida extends DaoVjrAbstract {
             password = "valeria_rogoski";
             Connection cnt;
             cnt = DriverManager.getConnection(url, user, password);
-            String sql = "insert into vjr_bebidas values (?,?,?,?,?,?,?)";
+            String sql = "insert into vjr_compra values (?,?,?,?,?,?,?)";
             PreparedStatement pst = cnt.prepareStatement( sql );
-            pst.setInt(1, vjrBebida.getVjrIdBebida());
-            pst.setString(2, vjrBebida.getVjrNome());
-            pst.setString(3, vjrBebida.getVjrMarca());
-            pst.setInt(4, vjrBebida.getVjrVolume());
-            pst.setInt(5, vjrBebida.getVjrPreco());
-            pst.setDate(6, null);
-            pst.setString(7, vjrBebida.getVjrStatus());
+            pst.setInt(1, vjrCompra.getVjrIdCompra());
+            pst.setString(2, vjrCompra.getVjrFormaPagamento());
+            pst.setString(3, vjrCompra.getVjrObservacao());
+            pst.setString(4, vjrCompra.getVjrStatus());
+            pst.setInt(5, vjrCompra.getVjrDesconto());
+            pst.setInt(6, vjrCompra.getVjrValorTotal());
+            pst.setDate(7, null);
+            
             pst.executeUpdate();
 
         } catch (ClassNotFoundException ex) {
@@ -49,7 +51,7 @@ public class DaoVjrBebida extends DaoVjrAbstract {
     
      @Override
     public void update(Object object) {
-        VjrBebida vjrBebida = (VjrBebida) object;
+        VjrCompra vjrCompra = (VjrCompra) object;
         try {
             Class.forName("com.mysql.jdbc.Driver");
             String url, user, password;
@@ -58,20 +60,20 @@ public class DaoVjrBebida extends DaoVjrAbstract {
             password = "valeria_rogoski";
             Connection cnt;
             cnt = DriverManager.getConnection(url, user, password);
-            PreparedStatement pst = cnt.prepareStatement("update set vjr_bebidas values(?,?,?,?,?,?,?) ");
+            PreparedStatement pst = cnt.prepareStatement("update set vjr_compra values(?,?,?,?,?,?,?) ");
           
             pst.executeUpdate();
             
         } catch (ClassNotFoundException ex) {
-            Logger.getLogger(DaoVjrBebida.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(DaoVjrCompra.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {
-            Logger.getLogger(DaoVjrBebida.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(DaoVjrCompra.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
     @Override
     public void delete(Object object) {
-        VjrBebida vjrBebida = (VjrBebida) object;
+        VjrCompra vjrCompra = (VjrCompra) object;
         try {
             Class.forName("com.mysql.jdbc.Driver");
             String url, user, password;
@@ -80,15 +82,15 @@ public class DaoVjrBebida extends DaoVjrAbstract {
             password = "valeria_rogoski";
             Connection cnt;
             cnt = DriverManager.getConnection(url, user, password);
-            String sql = "delete from vjr_bebidas values(?,?,?,?,?,?,?) ";
+            String sql = "delete from vjr_compra values(?,?,?,?,?,?,?) ";
             PreparedStatement pst = cnt.prepareStatement(sql);
             //
              pst.executeUpdate();
             
         } catch (ClassNotFoundException ex) {
-            Logger.getLogger(DaoVjrBebida.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(DaoVjrCompra.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {
-            Logger.getLogger(DaoVjrBebida.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(DaoVjrCompra.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
@@ -102,3 +104,4 @@ public class DaoVjrBebida extends DaoVjrAbstract {
         return null;
     }
 }
+
